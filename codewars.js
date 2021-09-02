@@ -160,3 +160,22 @@ const switcher = x => x.map(item => alpha[item]).join('');
 console.log(switcher(['24', '12', '23', '22', '4', '26', '9', '8']));
 console.log(switcher(['25','7','8','4','14','23','8','25','23','29','16','16','4']));
 console.log(switcher(['4', '24']));
+
+//Given a string of words (x), you need to return an array of the words, sorted alphabetically by the final character in each.
+
+// If two words have the same last letter, they returned array should show them in the order they appeared in the given string.
+
+// All inputs will be valid.
+
+// Test.assertSimilar(last('man i need a taxi up to ubud'), ['a', 'need', 'ubud', 'i', 'taxi', 'man', 'to', 'up']);
+// Test.assertSimilar(last('what time are we climbing up the volcano'), ['time', 'are', 'we', 'the', 'climbing', 'volcano', 'up', 'what']); 
+// Test.assertSimilar(last('take me to semynak'), ['take', 'me', 'semynak', 'to']); 
+
+function endSort(str) {
+    return str.split(" ").sort((a, b) => a[a.length - 1].charCodeAt(0) - b[b.length - 1].charCodeAt(0));
+  }
+  
+  console.log(endSort('man i need a taxi up to ubud'));
+  console.log(endSort('what time are we climbing up the volcano'));
+  console.log(endSort('take me to semynak'));
+  
