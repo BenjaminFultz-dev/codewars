@@ -273,5 +273,15 @@ function capitals(str) {
 
 console.log(capitals('CodEWaRs'));
 
+//Complete the solution so that it reverses the string passed into it.
+
+// 'world'  =>  'dlrow'
+
+function reverseString(string) {
+    return string.split("").reverse().join("");
+  };
+  
+  console.log(reverseString("world"));
+  console.log(reverseString("oozy rat in a sanitary zoo"));
   
   
