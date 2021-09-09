@@ -284,4 +284,21 @@ function reverseString(string) {
   console.log(reverseString("world"));
   console.log(reverseString("oozy rat in a sanitary zoo"));
   
+  //Create a function that will return a string that combines all of the letters of the three inputed strings in groups. Taking the first letter of all of the inputs and grouping them next to each other. Do this for every letter, see example below!
+
+// E.g. Input: "aa", "bb" , "cc" => Output: "abcabc"
+
+// Note: You can expect all of the inputs to be the same length.
+
+function combineStrings(stringOne, stringTwo, stringThree) {
+    let combinedString = ""
+    for (let i = 0; i < stringOne.length; i++) {
+      combinedString += stringOne[i] + stringTwo[i] + stringThree[i]
+    }
+    return combinedString
+  }
+  
+  console.log(combineStrings("aa", "bb", "cc"));
+  console.log(combineStrings("sea", "urn", "pms"));
+  
   
