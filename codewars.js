@@ -301,4 +301,14 @@ function combineStrings(stringOne, stringTwo, stringThree) {
   console.log(combineStrings("aa", "bb", "cc"));
   console.log(combineStrings("sea", "urn", "pms"));
   
+//Create a function that takes in a word and returns the word with the first letter capitalized.
+
+// Don't worry about numbers, special characters, or non-string types being passed to the function. The string lengths will be from 1 character up to 10 characters, but will never be empty.
+
+function capitalize(word) {
+    return word[0].toUpperCase() + word.slice(1);
+  };
+  
+  console.log(capitalize("friendship"));
+  
   
