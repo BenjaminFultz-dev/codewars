@@ -415,3 +415,22 @@ function countUnique(arr) {
   console.log(countUnique([[1,2],[3,4],[5,6]]));
   console.log(countUnique([[1,2,3],[3,4,6,6,7],[8,9,10,12,5,6]]));
   
+  //Given an array of integers, Find the Nth smallest element in this array of integers.
+//Array/list size is at least 3.
+//Array/list's numbers could be a mixture of poitives, negativs, and zeroes.
+//Repetiotion in array/list's numbers could occur, so don't remove duplications.
+
+//nthSmallest([3, 1, 2], 2) ==> 2
+//nthSmallest([177, 225, 243, -169, -12, -5, 2, 92], 5) ==> 92
+function nthSmallest(arr, num) {
+    return arr.sort((a, b) => a - b)[num - 1]
+  }
+  
+  console.log(nthSmallest([3, 1, 2], 2));
+  console.log(nthSmallest([177, 225, 243, -169, -12, -5, 2, 92], 5));
+  
+  function sortedArray(arr) {
+    const oddNums = arr.filter(n => n % 2 !== 0).sort((a, b) => b - a)
+    return arr.map(n => n % 2 === 0 ? n : oddNums.pop())
+  }
+  
