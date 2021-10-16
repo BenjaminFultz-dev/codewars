@@ -767,6 +767,22 @@ function stringToArray(string){
 const usdcny = usd => `${(usd*6.75).toFixed(2)} Chinese Yuan`;
 
 
+// Write a function generatePairs (Javascript) / generate_pairs (Python / Ruby) that accepts an integer argument n and generates an array containing the pairs of integers [a, b] that satisfy the following conditions:
+// 0 <= a <= b <= n
+// The pairs should be sorted by increasing values of a then increasing values of b.
+// For example,
+// generatePairs(2) should return
+// [ [0, 0], [0, 1], [0, 2], [1, 1], [1, 2], [2, 2] ]
+const generatePairs = function(n) {
+  const arr = []
+  for (let i=0; i <= n; i++){
+    for (let j=i; j <= n; j++){
+      arr.push([i,j])
+    }
+  }
+  return arr
+}
+
 
 
 
