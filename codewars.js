@@ -15,10 +15,10 @@ function squareSum(arr) {
 // --> "alpha beta gamma delta alpha beta gamma delta"
 
 function removeDuplicates(str) {
-    return str.split("").filter(word => str.indexOf() === word.lastIndexOf()).join("");
+  return str.split(' ').filter((w,i,a) => w != a[i-1] ).join(' ');
   }
   
-  console.log(removeDuplicates("alpha beta gamma delta alpha beta gamma delta"))
+  console.log(removeDuplicates("alpha beta beta gamma gamma gamma delta alpha beta beta gamma gamma gamma delta"));
   
   
 //Write a function that when given a URL as a string, parses out just the domain name and returns it as a string. For example:
@@ -1016,13 +1016,18 @@ function closeCompare(a, b, margin = 0) {
 // dup(["kelless","keenness"]), ['keles','kenes'])
 
 function dup(s) {
-    return s.map(w => {
-      return w.split('').filter((c, i, arr) => {
-        return c !== arr[i - 1];
-      }).join('');
-    });
+    return s.map(str => str.split("").filter((l, i, a) => l != a[i - 1]).join(""));
   };
 
+//   Nathan loves cycling.
+
+// Because Nathan knows it is important to stay hydrated, he drinks 0.5 litres of water per hour of cycling.
+
+// You get given the time in hours and you need to return the number of litres Nathan will drink, rounded to the smallest value.
+
+function litres(time) {
+  return Math.floor(time * 0.5);
+}
 
 
 
