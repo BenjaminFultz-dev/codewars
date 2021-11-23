@@ -1248,3 +1248,16 @@ function dblLinear(n) {
 // (15, -5, 3)   ->  true
 
 const isDivideBy = (number, a, b) => number % a === 0 && number % b === 0;
+
+// Given a string of characters as input, write a function that returns it with the characters reversed. No Reverse Method (well brute force it first, but then no reverse method)!
+
+function reverseStr(str){
+  let reverseStr = ""
+  for(let char of str){
+    reverseStr = char + reverseStr
+  }
+  return reverseStr
+}
+
+console.log(reverseStr('bob'), 'bob')
+console.log(reverseStr('john'), 'nhoj')
