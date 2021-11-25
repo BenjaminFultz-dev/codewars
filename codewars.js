@@ -1282,3 +1282,18 @@ console.log(reverseStr('john'), 'nhoj')
 function josephusSurvivor(n, k){
   return n < 1 ? 1 : (josephusSurvivor(n - 1, k) + --k) % n + 1;
 }
+
+// Write a function that removes every lone 9 that is inbetween 7s.
+
+// "79712312" --> "7712312"
+// "79797"    --> "777"
+
+function sevenAte9(str){
+  var strArray = str.split('');
+  for (var i = strArray.length - 2; i >= 1; i--) {
+    if (strArray[i - 1] === '7' && strArray[i] === '9' && strArray[i + 1] === '7')
+      strArray.splice(i , 1);
+  }
+  
+  return strArray.join('');
+}
