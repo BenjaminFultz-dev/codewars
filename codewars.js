@@ -1435,3 +1435,44 @@ function array(arr){
   return arr.split(",").slice(1,-1).join(" ") || null;
 }
 
+
+// Your task is to return the total time taken to remove all the screws, in seconds.
+
+// Examples
+// In order to be more clear, we use ABCDEF to represent the screws. The number in brackets is the time in seconds:
+
+// screws: "---+++"
+//          ABCDEF
+
+// remove A (1) + move to B (1) + remove B (1) + 
+// move to C (1) + remove C (1) + move to D (1) +
+// switch screwdriver (5) + remove D (1) +
+// move to E (1) + remove E (1) + move to F (1) + remove F (1)
+
+// total time = 16 seconds
+// Another example:
+
+// screws: "-+-+-+"
+//          ABCDEF
+
+// remove A (1) +
+// move to B (1) + switch screwdriver (5) + remove B (1) +
+// move to C (1) + switch screwdriver (5) + remove C (1) +
+// move to D (1) + switch screwdriver (5) + remove D (1) +
+// move to E (1) + switch screwdriver (5) + remove E (1) +
+// move to F (1) + switch screwdriver (5) + remove F (1)
+
+// total time = 36 seconds 
+
+const sc = screws => {
+  let time = 1;
+  const remove = 1;
+  const move = 1;
+  const change = 5;
+  for(let i = 0; i < screws.length-1; i++){
+    time += move + remove + (screws[i] === screws[i+1] ? 0 : change);
+  }
+  return time;
+}
+
+
