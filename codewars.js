@@ -1976,3 +1976,16 @@ correct = s => s.replace(/0/g,'O').replace(/1/g,'I').replace(/5/g,'S')
 // (15, -5, 3)   ->  true
 
 const isDivideBy = (number, a, b) => number % a === 0 && number % b === 0;
+
+// We need a function that can transform a number into a string.
+
+// What ways of achieving this do you know?
+
+// Examples:
+// 123 --> "123"
+// 999 --> "999"
+
+
+function numberToString(num) {
+  return num.toString();
+}
