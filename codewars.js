@@ -2190,3 +2190,16 @@ function overTheRoad(address, n){
 
 const isDivideBy = (number, a, b) => number % a === 0 && number % b === 0;
 
+
+// We need a function that can transform a number into a string.
+
+// What ways of achieving this do you know?
+
+// Examples:
+// 123 --> "123"
+// 999 --> "999"
+
+
+function numberToString(num) {
+  return num.toString();
+}
